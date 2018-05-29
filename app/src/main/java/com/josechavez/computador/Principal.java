@@ -83,6 +83,7 @@ public class Principal extends AppCompatActivity implements AdaptadorComputador.
         b.putString("marca",c.getMarca());
         b.putString("ram",c.getRam());
         b.putString("tipo",c.getTipo());
+        b.putString("color",c.getColor());
         b.putString("sistema",c.getSistema());
         b.putInt("foto",c.getFoto());
 

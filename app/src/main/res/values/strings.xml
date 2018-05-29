@@ -19,7 +19,7 @@
     <string name="rojo">ROJO</string>
     <string name="escritorio">ESCRITORIO</string>
     <string name="portatil">PORTATIL</string>
-    <string name="windows">PORTATIL</string>
+    <string name="windows">WINDOWS</string>
     <string name="linux">LINUX</string>
     <string name="solaris">SOLARIS</string>
     <string name="macos">MACOS</string>
@@ -29,6 +29,7 @@
     <string name="pregunta_eliminacion">Desea eliminar los datos?</string>
     <string name="positivo">si</string>
     <string name="negativo">no</string>
+    <string name="error">No puede quedar vacio el campo</string>
     <string-array name="lst_marca">
         <item>@string/hp</item>
         <item>@string/acer</item>

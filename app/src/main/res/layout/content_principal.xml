@@ -10,5 +10,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context="com.josechavez.computador.Principal"
         tools:showIn="@layout/activity_principal"
+    tools:layout_editor_absoluteX="8dp"
+    tools:layout_editor_absoluteY="8dp"
     android:id="@+id/listaComputadores"
     />

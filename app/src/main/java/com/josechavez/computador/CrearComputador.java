@@ -23,7 +23,7 @@ public class CrearComputador extends AppCompatActivity {
         txtRam = findViewById(R.id.txtRam);
         //Spinner de Marcas
         spn_marca = findViewById(R.id.lst_marca);
-        opc_marca = this.getResources().getStringArray(R.array.lst_sitema);
+        opc_marca = this.getResources().getStringArray(R.array.lst_marca);
         adp_marca = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,opc_marca);
         spn_marca.setAdapter(adp_marca);
         //Spinner de Tipos
@@ -50,6 +50,15 @@ public class CrearComputador extends AppCompatActivity {
         //Toast.makeText(this,cadena,Toast.LENGTH_LONG).show();
         return  cadena;
     }
+    public boolean validar(EditText txt,String error){
+        if (txt.getText().toString().equals("")) {
+        txt.setError(error);
+        return false;
+    }
+        return true;
+    }
+
+
     public int Numerofoto(Spinner spinner){
         int foto=0;
         int posicion=spinner.getSelectedItemPosition();
@@ -69,21 +78,24 @@ public class CrearComputador extends AppCompatActivity {
     }
 
     public void guardar(View view){
-        String ram,id;
-        String marca,color,tipo,sistema;
-        int foto;
-        ram=txtRam.getText().toString();
-        marca=obtenerCampo(spn_marca);
-        tipo=obtenerCampo(spn_tipo);
-        color=obtenerCampo(spn_color);
-        sistema=obtenerCampo(spn_sistema);
-        id= Datos.getId();
-        foto=Numerofoto(spn_marca);
+        if (validar(txtRam,getResources().getString(R.string.error))){
 
-        Computador c=new Computador(id,marca,ram,color,tipo,sistema,foto);
-        c.guardar();
-        Snackbar.make(view, getResources().getString(R.string.guardado),Snackbar.LENGTH_SHORT).setAction("Action",null).show();
-        limpiar();
+            String ram,id;
+            String marca,color,tipo,sistema;
+            int foto;
+            ram=txtRam.getText().toString();
+            marca=obtenerCampo(spn_marca);
+            tipo=obtenerCampo(spn_tipo);
+            color=obtenerCampo(spn_color);
+            sistema=obtenerCampo(spn_sistema);
+            id= Datos.getId();
+            foto=Numerofoto(spn_marca);
+
+            Computador c=new Computador(id,marca,ram,color,tipo,sistema,foto);
+            c.guardar();
+            Snackbar.make(view, getResources().getString(R.string.guardado),Snackbar.LENGTH_SHORT).setAction("Action",null).show();
+            limpiar();
+        }
     }
     public void limpiar(View v){
         limpiar();

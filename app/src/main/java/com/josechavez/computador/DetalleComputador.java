@@ -14,7 +14,7 @@ public class DetalleComputador extends AppCompatActivity {
     private TextView txtRamDetalle;
     private TextView txtColorDetalle;
     private TextView txtTipoDetalle;
-    private TextView txtSistemaetalle;
+    private TextView txtSistemaDetalle;
     private ImageView fot;
     private String id,marca,ram,color,tipo,sistema;
     private int foto;
@@ -28,8 +28,8 @@ public class DetalleComputador extends AppCompatActivity {
         txtRamDetalle = findViewById(R.id.txtRamDetalle);
         txtColorDetalle = findViewById(R.id.txtColorDetalle);
         txtTipoDetalle = findViewById(R.id.txtTipoDetalle);
-        txtSistemaetalle=findViewById(R.id.txtSistemasDetalle);
-        fot = findViewById(R.id.foto);
+        txtSistemaDetalle=findViewById(R.id.txtSistemasDetalle);
+        fot = findViewById(R.id.foto_mostrar);
         i =getIntent();
         bundle = i.getBundleExtra("datos");
         marca = bundle.getString("marca");
@@ -42,10 +42,10 @@ public class DetalleComputador extends AppCompatActivity {
 
         txtMarcaDetalle.setText(marca);
         txtRamDetalle.setText(ram);
-        txtColorDetalle.setText(color); ;
+        txtColorDetalle.setText(color);
         txtTipoDetalle.setText(tipo);
-        txtSistemaetalle.setText(sistema);
-        fot = findViewById(R.id.foto);
+        txtSistemaDetalle.setText(sistema);
+        fot.setImageResource(foto);
 
     }
     public void eliminar(View v){

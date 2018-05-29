@@ -23,10 +23,10 @@
             android:fitsSystemWindows="true"
             app:expandedTitleMarginStart="48dp"
             app:expandedTitleMarginEnd="64dp"
-            app:contentScrim="?attr/colorPrimary">
+            app:contentScrim="?attr/colorPrimaryDark">
 
             <ImageView
-                android:id="@+id/foto"
+                android:id="@+id/foto_mostrar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -178,16 +178,6 @@
         fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
         >
 
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/menu_modificar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_edit"
-            fab:fab_size="mini"
-            fab:fab_label="@string/modificar"
-            app:fab_colorNormal="@color/colorAccent"
-            app:fab_colorPressed="@color/colorAccent"
-            />
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/menu_eliminar"
