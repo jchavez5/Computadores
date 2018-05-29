@@ -13,11 +13,11 @@ import java.util.ArrayList;
  * Created by Josechavez on 28/05/2018.
  */
 
-class AdaptadorComputador {
+class AdaptadorComputador extends RecyclerView.Adapter<AdaptadorComputador.ComputadorViewHolder>{
     private ArrayList<Computador> computador;
     private OnComputadorClickListener clickListener;
-    public AdaptadorCarro(ArrayList<Computador> carros, OnComputadorClickListener clickListener) {
-        this.computador = carros;
+    public AdaptadorComputador(ArrayList<Computador> computadores, OnComputadorClickListener clickListener) {
+        this.computador = computadores;
         this.clickListener = clickListener;
     }
 
@@ -35,7 +35,7 @@ class AdaptadorComputador {
         holder.marca.setText(c.getMarca());
         holder.ram.setText(c.getRam());
         holder.color.setText(c.getColor());
-        holder.tipo.setText(c.getTipo());
+        holder.sistema.setText(c.getSistema());
 
         holder.v.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,7 +54,6 @@ class AdaptadorComputador {
         private TextView marca;
         private TextView ram;
         private TextView color;
-        private TextView tipo;
         private TextView sistema;
         private View v;
 
@@ -62,14 +61,16 @@ class AdaptadorComputador {
             super(itemView);
             v = itemView;
             foto = v.findViewById(R.id.imgFoto);
-            placa = v.findViewById(R.id.lblPlaca);
             marca = v.findViewById(R.id.lblMarca);
-            modelo = v.findViewById(R.id.lblModelo);
-            precio = v.findViewById(R.id.lblPrecio);
-            color = v.findViewById(R.id.lblColor);
+            ram = v.findViewById(R.id.lblRam);
+            color = v.findViewById(R.id.lblColors);
+            sistema= v.findViewById(R.id.lblsistems);
 
         }
 
+    }
+    public interface OnComputadorClickListener{
+        void onComputadorClick(Computador c);
     }
 
 }

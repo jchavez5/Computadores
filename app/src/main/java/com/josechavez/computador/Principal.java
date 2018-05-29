@@ -20,10 +20,10 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Principal extends AppCompatActivity implements AdaptadorComputador.OnCarroClickListener{
+public class Principal extends AppCompatActivity implements AdaptadorComputador.OnComputadorClickListener{
 
     private RecyclerView ListaComputador;
-    private static String db = "Computadores";
+    private static String db = "computador";
     private DatabaseReference databaseReference;
     private Intent i;
     private LinearLayoutManager llm;
@@ -75,4 +75,8 @@ public class Principal extends AppCompatActivity implements AdaptadorComputador.
 
     }
 
+    @Override
+    public void onComputadorClick(Computador c) {
+
+    }
 }
