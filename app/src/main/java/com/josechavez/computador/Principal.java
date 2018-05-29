@@ -77,6 +77,17 @@ public class Principal extends AppCompatActivity implements AdaptadorComputador.
 
     @Override
     public void onComputadorClick(Computador c) {
+        Intent i = new Intent(Principal.this,DetalleComputador.class);
+        Bundle b = new Bundle();
+        b.putString("id",c.getId());
+        b.putString("marca",c.getMarca());
+        b.putString("ram",c.getRam());
+        b.putString("tipo",c.getTipo());
+        b.putString("sistema",c.getSistema());
+        b.putInt("foto",c.getFoto());
+
+        i.putExtra("datos",b);
+        startActivity(i);
 
     }
 }

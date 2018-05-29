@@ -24,6 +24,11 @@
     <string name="solaris">SOLARIS</string>
     <string name="macos">MACOS</string>
     <string name="guardado">GUARDADO EXITOSAMENTE!!!</string>
+    <string name="informacion">Detalle del computador</string>
+    <string name="eliminar">Eliminado</string>
+    <string name="pregunta_eliminacion">Desea eliminar los datos?</string>
+    <string name="positivo">si</string>
+    <string name="negativo">no</string>
     <string-array name="lst_marca">
         <item>@string/hp</item>
         <item>@string/acer</item>

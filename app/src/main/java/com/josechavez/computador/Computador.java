@@ -16,6 +16,10 @@ class Computador {
     public Computador() {
     }
 
+    public Computador(String id) {
+        this.id = id;
+    }
+
     public Computador(String id, String marca, String ram, String color, String tipo, String sistema, int foto) {
         this.id = id;
         this.marca = marca;
@@ -85,8 +89,8 @@ class Computador {
     public void guardar(){
         Datos.guardar(this);
     }
-  //  public void eliminar(){
-   //     Datos.eliminarComputador(this);
-    //}
+   public void eliminar(){
+      Datos.eliminarComputador(this);
+    }
 }
 

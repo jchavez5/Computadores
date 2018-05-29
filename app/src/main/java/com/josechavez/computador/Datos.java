@@ -31,4 +31,7 @@ class Datos {
         Datos.computador= carros;
 
     }
+    public static void eliminarComputador(Computador c){
+        databaseReference.child(db).child(c.getId()).removeValue();
+    }
 }
